@@ -1,38 +1,129 @@
 .App {
   text-align: center;
+  width: 100vw;
+  height: 100vh;
+  color: rgb(17, 1, 1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  padding: 0;
+  margin: 0;
+  background-color: #ccbcbc;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav {
+  height: 60px;
+  width: 100%;
+  margin: 0;
+  border-bottom: 1px solid rgb(225, 25, 25);
+  display: grid;
+  place-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav h1 {
+  margin: 0;
+  color: rgb(23, 22, 22);
+  font-size: 45px;
+}
+
+.game {
+  width: 100vw;
+  height: calc(100vh - 170px);
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+  flex-direction: column;
+}
+
+.board {
+  width: 240px;
+  height: 550px;
+  border: 1px solid rgb(211, 111, 111);
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.row {
+  flex: 33%;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.letter {
+  
+  width: 1.5em;
+  height: 1.5em;
+  border: 1px solid rgb(10, 92, 128);
+  border-radius: 4px;
+  margin: 3px;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  font-weight: bolder;
+  color: rgb(17, 68, 6);
+}
+
+#correct {
+  background-color: #031702;
+}
+
+#almost {
+  background-color: #0f0427;
+}
+
+#error {
+  background-color: #393b3c;
+}
+
+.keyboard {
+  width: 700px;
+  height: 300px;
+  margin-top: 60px;
+}
+
+.line1 {
+  flex: 33%;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 3px;
 }
 
-.App-link {
-  color: #61dafb;
+.line2 {
+  flex: 33%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.line3 {
+  flex: 33%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 3px;
+}
+
+.key {
+  width: 50px;
+  height: 50px;
+  margin: 2px;
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  background-color: gray;
+  color: rgb(135, 48, 48);
+  cursor: pointer;
+}
+
+#big {
+  width: 100px;
+}
+
+#disabled {
+  background-color: #150438;
 }
